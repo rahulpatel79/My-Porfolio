@@ -91,6 +91,7 @@
     --fw-400: 400;
     --fw-500: 500;
     --fw-600: 600;
+    
   
     /**
      * shadow
@@ -1460,7 +1461,7 @@ justify-content: center;
       --fs-6: 15px;
       --fs-7: 15px;
       --fs-8: 12px;
-  
+   
     }
   
   
@@ -2083,4 +2084,38 @@ justify-content: center;
 
 .persent:hover::after {
   width: 100%;
+}
+
+/* add border css */
+ .glow-border {
+  /* position: relative; */
+  border: 4px solid transparent;
+  border-radius: 12px;
+  background-image:
+    linear-gradient(var(--eerie-black-2), var(--eerie-black-2)), /* inner bg */
+    linear-gradient(
+      60deg,
+      #722350,
+      #4f1681,
+      #2b86c5,
+      #f83600,
+      #ecca1f,
+      #000000,
+      #28693d
+    ); /* animated border gradient */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-size: 300% 300%;
+  animation: borderAnim 2s linear infinite;
+}
+@keyframes borderAnim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
